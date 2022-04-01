@@ -1,4 +1,4 @@
-import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 
 export interface catState {

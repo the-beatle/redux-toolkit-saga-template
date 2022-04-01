@@ -4,6 +4,7 @@ import { Cat } from './features/cats/Cats';
 import './App.css';
 import { useDispatch } from 'react-redux';
 import { getCatsFetch } from './features/cats/catsSlice';
+import {from} from "rxjs"
 
 function App() {
   const dispatch = useDispatch()
