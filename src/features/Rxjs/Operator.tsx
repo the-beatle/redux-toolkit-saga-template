@@ -1,6 +1,6 @@
 import { fromEvent, of } from 'rxjs'
 import { useEffect, useRef, useState } from "react";
-import { map,first, delay } from 'rxjs/operators';
+import { map,first } from 'rxjs/operators';
 import { FromEventTarget } from 'rxjs/internal/observable/fromEvent'
 
 function Operators() {
@@ -19,15 +19,9 @@ function Operators() {
   return (
     <div className="App">
       <header className="App-header">
+        hello world!
+        {value}
         <InputBox/>
-        <h1>Operators</h1>
-        <p>Operators are functions</p>
-        <p>A <strong>Pipeable operator</strong> is a function that takes an Observable as its input and returns another Observable. It is a pure operation: the previous Observable stays unmodified.</p>
-      <p><strong>Creation Operators</strong> create new Observables</p>
-      <h2>Marble diagrams</h2>
-      <p>
-      In a marble diagram, time flows to the right, and the diagram describes how values ("marbles") are emitted on the Observable execution.
-      </p>
       </header>
     </div>
   );
@@ -41,9 +35,7 @@ const InputBox = () => {
 
   useEffect(() => {
     if (null==buttonEl.current) return
-    const clicks = fromEvent<HTMLButtonElement>(buttonEl.current, 'click')
-    const delayedClicks = clicks.pipe(delay(1000))
-    const clicky = delayedClicks.subscribe(clickety =>
+    const clicky = fromEvent<HTMLButtonElement>(buttonEl.current, 'click').subscribe(clickety =>
       console.log({ clickety })
     );
 
@@ -52,7 +44,7 @@ const InputBox = () => {
 
   return (
     <button ref={buttonEl} type="button">
-      Deleayed clicks
+      Click Me
     </button>
   );
 };
