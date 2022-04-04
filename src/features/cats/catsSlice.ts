@@ -11,7 +11,7 @@ const initialState: catState = {
     isLoading: false
 }
 
-export const catState = createSlice({
+export const catSlice = createSlice({
     name: 'cats',
     initialState,
     // The `reducers` field lets us define reducers and generate associated actions
@@ -29,6 +29,6 @@ export const catState = createSlice({
     },
 })
 
-export const {getCatsFetch, getCatsSuccess, getCatsFailure} = catState.actions
+export const {getCatsFetch, getCatsSuccess, getCatsFailure} = catSlice.actions
 
-export default catState.reducer
+export default catSlice.reducer
