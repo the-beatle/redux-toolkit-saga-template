@@ -3,20 +3,19 @@ import { interval, from } from "rxjs";
 import { useEffect, useState } from "react";
 import Operators from "./features/Rxjs/Operators";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
-
-const observable = interval(1000);
+import Observables from "./features/Rxjs/Observables";
 
 function App() {
   const [value, setValue] = useState(0);
 
   return (
     <Router>
-      <div>
+      <div className="App">
         <nav>
-          <Link to="/">Home</Link>
+          <Link to="/observables">Observable</Link>
         </nav>
         <Switch>
-          <Route exact path="/" component={Index} />
+          <Route exact path="/observables" component={Observables} />
         </Switch>
       </div>
     </Router>
