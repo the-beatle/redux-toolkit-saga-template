@@ -1,6 +1,6 @@
 import { Observable, from } from "rxjs";
 import { useEffect, useState } from "react";
-
+import styles from "./blog.module.css"
 
 function Observables() {
   const [value, setValue] = useState(0);
@@ -78,16 +78,13 @@ function Observables() {
 
   return (
     <div>
-      <header>
-        <h1>Observable</h1>
-        <h2>Contents</h2>
-        <p>Pull vs Push</p>
-        <a href="https://rxjs.dev/guide/observable">link to official docs</a>
+      <div className={styles.container}>
+        <h1 className={styles.h1}>Observable</h1>
         <p><strong>Example.</strong>The following is an Observable that pushes the values 1, 2, 3 immediately (synchronously) when subscribed, and the value 4 after one second has passed since the subscribe call, then completes:</p>
-        <div>{value}</div>
+        <div style={{color:"red"}}>{value}</div>
         <p><strong>What is push?</strong> In Push systems, the Producer determines when to send data to the Consumer. The Consumer is unaware of when it will receive that data</p>
         <p>An <strong>Observable</strong> is a lazily evaluated computation that can synchronously or asynchronously return zero to (potentially) infinite values from the time it's invoked onwards</p>
-      <h2>Observables as generalizations of functions</h2>
+      <h3>Observables as generalizations of functions</h3>
       <p>Observables are like functions with zero arguments, but generalize those to allow multiple values.</p>
       <p>Subscribing to an Observable is analogous to calling a Function.</p>
       <p>Functions can only return one value. Observables, can return several. Sync and Async</p>
@@ -95,7 +92,7 @@ function Observables() {
         <code>func.call()</code> means "give me one value sunchronously"
       </p>
       <p>
-        <code>obsrvable.subscribe()</code> means "give me any amnount of values, either synchronously r asynchronously"
+        <code>observable.subscribe()</code> means "give me any amount of values, either synchronously or asynchronously"
       </p>
       <h4>Anatomy of an Observable</h4>
       <ul>
@@ -105,16 +102,16 @@ function Observables() {
         <li><strong>disposing</strong> Observables</li>
       </ul>
       
-      <h1>Creating Observables</h1>
+      <h3>Creating Observables</h3>
       The <code>Observable</code> constructur takes one argument: the <strong>Subscribe</strong> function
       <p>Observables can be created with <code>new Observable</code>. Most commonly, observables are created using creation functions, like <code>of, from, interval</code>, etc.</p>
       <p><strong>About lazyness</strong>This happens because both functions and Observables are lazy computations. If you don't call the function, the console.log('Hello') won't happen</p>
 
-      <h1>Subscribing to Observables</h1>
+      <h3>Subscribing to Observables</h3>
       
       <p>Subscribing to an Observable is like calling a function, providing callbacks where the data will be delivered to</p>
 
-      <h1>Executing Observables</h1>
+      <h3>Executing Observables</h3>
       
       <p>There are three types of values an observable execution can deliver</p>
       <ul>
@@ -124,11 +121,11 @@ function Observables() {
       </ul>
 
       <p>In an Observable Execution, zero to infinite Next notifications may be delivered. If either an Error or Complete notification is delivered, then nothing else can be delivered afterwards</p>
-      <h1>Disposing Observable Executions</h1>
+      <h3>Disposing Observable Executions</h3>
       <p>When you subscribe, you get back a Subscription, which represents the ongoing execution. Just call unsubscribe() to cancel the execution.</p>
-
       <p><strong>About lazyness</strong>This happens because both functions and Observables are lazy computations. If you don't call the function, the console.log('Hello') won't happen</p>
-      </header>
+      <a href="https://rxjs.dev/guide/observable">link to official docs</a>
+      </div>
     </div>
   );
 }

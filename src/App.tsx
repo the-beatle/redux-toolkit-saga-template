@@ -16,16 +16,16 @@ function App() {
     <Router>
       <div className="App">
         <nav>
-          <Link to="/observables">Observable</Link>
-          <Link to="/observers">Observers</Link>
-          <Link to="/operators">Operators</Link>
-          <Link to="/subscriptions">Subscriptions</Link>
-          <Link to="/subjects">Subjects</Link>
-          <Link to="/multicasted-observables">Multicasted Observables</Link>          
-          <Link to="/behaviorsubject">BehaviorSubject</Link>
-          <Link to="/replaySubject">Replaysubject</Link>
-          <Link to="/asyncsubject">AsyncSubject</Link>
-          <Link to="/scheduler">Scheduler</Link>
+          <Link className="navLink" to="/observables">Observable</Link>
+          <Link className="navLink" to="/observers">Observers</Link>
+          <Link className="navLink" to="/operators">Operators</Link>
+          <Link className="navLink" to="/subscriptions">Subscriptions</Link>
+          <Link className="navLink" to="/subjects">Subjects</Link>
+          <Link className="navLink" to="/multicasted-observables">Multicasted Observables</Link>          
+          <Link className="navLink" to="/behaviorsubject">BehaviorSubject</Link>
+          <Link className="navLink" to="/replaySubject">Replaysubject</Link>
+          <Link className="navLink" to="/asyncsubject">AsyncSubject</Link>
+          <Link className="navLink" to="/scheduler">Scheduler</Link>
         </nav>
         <Switch>
           <Route exact path="/observables" component={Observables} />

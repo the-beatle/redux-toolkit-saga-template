@@ -1,14 +1,12 @@
-import { asyncScheduler, AsyncSubject, from, Observable } from "rxjs";
+import { asyncScheduler, AsyncSubject, from, Observable, of } from "rxjs";
 import { useEffect } from "react";
-import { observeOn } from "rxjs/operators";
+import { observeOn,map,delay } from "rxjs/operators";
 
 function Scheduler() {
   useEffect(() => {
     const task = () => console.log('it works!');
     asyncScheduler.schedule(task,2000)
-    const result = from([10, 20, 30])
-    result.subscribe((value)=>console.log(value))
-    
+
     const observable = new Observable((proxyObserver) => {
       proxyObserver.next(1);
       proxyObserver.next(2);
