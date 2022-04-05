@@ -7,6 +7,9 @@ import Subscriptions from "./features/Rxjs/Subscriptions";
 import Subjects from "./features/Rxjs/Subjects";
 import MulticastedObservables from "./features/Rxjs/MulticastedObservables";
 import BehaviorSubjects from "./features/Rxjs/BehaviorSubjects";
+import ReplaySubjects from "./features/Rxjs/ReplaySubjects";
+import AsyncSubjects from "./features/Rxjs/AsyncSubjects";
+import Scheduler from "./features/Rxjs/Scheduler";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Link to="/subjects">Subjects</Link>
           <Link to="/multicasted-observables">Multicasted Observables</Link>          
           <Link to="/behaviorsubject">BehaviorSubject</Link>
+          <Link to="/replaySubject">Replaysubject</Link>
+          <Link to="/asyncsubject">AsyncSubject</Link>
+          <Link to="/scheduler">Scheduler</Link>
         </nav>
         <Switch>
           <Route exact path="/observables" component={Observables} />
@@ -29,6 +35,9 @@ function App() {
           <Route exact path="/subjects" component={Subjects} />
           <Route exact path="/multicasted-observables" component={MulticastedObservables}/>
           <Route exact path="/behaviorsubject" component={BehaviorSubjects}/>
+          <Route exact path="/replaySubject" component={ReplaySubjects}/>
+          <Route exact path="/asyncSubject" component={AsyncSubjects}/>
+          <Route exact path="/scheduler" component={Scheduler}/>
         </Switch>
       </div>
     </Router>
