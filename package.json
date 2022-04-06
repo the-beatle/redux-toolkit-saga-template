@@ -7,12 +7,16 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@types/codemirror": "^5.60.5",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.20.47",
     "@types/react": "^16.14.24",
     "@types/react-dom": "^16.9.14",
     "@types/react-redux": "^7.1.23",
     "@types/react-router-dom": "^5.3.3",
+    "babel-plugin-prismjs": "^2.1.0",
+    "codemirror": "^5.65.2",
+    "prismjs": "^1.27.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-redux": "^7.2.7",
@@ -43,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/prismjs": "^1.26.0"
   }
 }
