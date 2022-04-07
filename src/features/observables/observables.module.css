@@ -17,3 +17,17 @@ code {
   overflow: auto;
   background-color:rgb(241, 236, 236);
 }
+
+.output{
+  background-color: rgb(245, 236, 236);
+  padding:10px;
+  color:red;
+}
+.note{
+  background-color: rgb(238, 250, 235);
+  padding: 10px;
+}
+
+.note h4{
+  background-color: rgb(238, 243, 224);
+}
