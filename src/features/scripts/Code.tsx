@@ -1,6 +1,6 @@
 import Prism from "prismjs";
 import { useEffect } from "react";
-
+import styles from "./code.module.css"
 
 interface CodeInterface {
     code: string;
@@ -13,7 +13,7 @@ interface CodeInterface {
       Prism.highlightAll();
     }, []);
     return (
-      <div className="Code">
+      <div className={styles.code}>
         <pre>
           <code className={`language-${language}`}>{code}</code>
         </pre>

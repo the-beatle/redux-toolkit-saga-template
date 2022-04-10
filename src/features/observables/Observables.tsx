@@ -33,7 +33,6 @@ function Observables() {
   };
 
   return (
-    <div>
       <div className={styles.container}>
         <h1>Observable</h1>
         <p>
@@ -56,7 +55,9 @@ function Observables() {
           the value 4 after one second has passed since the subscribe call, then
           completes.
         </p>
-        <Code code={ObservableCode} language="javascript" />
+        <p>
+          <Code code={ObservableCode} language="javascript" />        
+        </p>
         <button onClick={onclick}>click to run or reload code</button>
         <div className={styles.output}>
           <div>{`Got value ${value}`}</div>
@@ -71,7 +72,7 @@ function Observables() {
             <strong>Sync and Async.</strong>
           </i>
         </p>
-        <ul>
+        <ul >
           <li>
             <code>func.call()</code> means "give me one value synchronously".
           </li>
@@ -136,7 +137,6 @@ function Observables() {
 
         <a href="https://rxjs.dev/guide/observable">link to official docs</a>
       </div>
-    </div>
   );
 }
 
