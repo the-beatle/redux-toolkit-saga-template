@@ -1,0 +1,105 @@
+.full-width-panel {
+    /* undo the white-space setting Fresh puts in */
+    white-space: normal;
+    height: 100%;
+    width: 100%;
+    border: 2px solid grey;
+    border-style: ridge;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: darkgray;
+}
+
+.full-width-flag {
+    float: left;
+    padding: 6px;
+}
+
+.full-width-summary {
+    float: left;
+    margin-right: 10px;
+}
+
+.full-width-panel label {
+    padding-top: 3px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.full-width-center {
+    overflow-y: scroll;
+    border: 1px solid grey;
+    padding: 2px;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: cursive;
+    background-color: #fafafa;
+}
+
+.full-width-center p {
+    margin-top: 0px;
+}
+
+.full-width-title {
+    font-size: 20px;
+}
+
+/* Modal container */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Modal close button */
+.close {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ccc;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal body */
+.modal-body {
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+

@@ -1,0 +1,14 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: auto;
+    text-align: left;
+    height: 100vh;
+    padding: 20px;
+}
+
+testGrid {
+    flex-grow: 1;
+}
